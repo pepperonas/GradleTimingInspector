@@ -1,0 +1,28 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="GradleTimingInspector">
+    <output-path>$PROJECT_DIR$/out/artifacts/GradleTimingInspector</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="io.celox.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="icons">
+          <JavaFxApplicationIcons>
+            <option name="linuxIcon" value="$PROJECT_DIR$/imgs/web_hi_res_512.png" />
+            <option name="macIcon" value="$PROJECT_DIR$/imgs/web_hi_res_512.icns" />
+            <option name="windowsIcon" value="$PROJECT_DIR$/imgs/web_hi_res_512.ico" />
+          </JavaFxApplicationIcons>
+        </option>
+        <option name="nativeBundle" value="all" />
+        <option name="title" value="GradleTimingInspector" />
+        <option name="vendor" value="celox" />
+        <option name="version" value="0.0.1" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="JavaFXApp.jar">
+        <element id="module-output" name="GradleTimingInspector" />
+      </element>
+    </root>
+  </artifact>
+</component>
