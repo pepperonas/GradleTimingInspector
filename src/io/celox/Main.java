@@ -132,14 +132,16 @@ public class Main extends Application {
         if (content == null || content.isEmpty()) return;
         String[] lines = content.split("\n");
         for (String line : lines) {
-            try {
-                int duration = Integer.parseInt(line.split("ms")[0].replace(" ", ""));
-                if (duration > mDurationLongest) {
-                    mDurationLongest = duration;
+            if (line.contains("ms")) {
+                try {
+                    int duration = Integer.parseInt(line.split("ms")[0].replace(" ", ""));
+                    if (duration > mDurationLongest) {
+                        mDurationLongest = duration;
+                    }
+                    mDurationTotal += duration;
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-                mDurationTotal += duration;
-            } catch (Exception e) {
-                e.printStackTrace();
             }
         }
         mNumberOfBuilds++;
