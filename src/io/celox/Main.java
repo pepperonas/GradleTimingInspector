@@ -16,6 +16,12 @@
 
 package io.celox;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.List;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -30,12 +36,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.List;
 
 public class Main extends Application {
 
@@ -105,6 +105,11 @@ public class Main extends Application {
         HBox hBox = new HBox(10);
         Button btnGoBottom = new Button("GO!");
         btnGoBottom.setOnAction(event -> {
+
+            mNumberOfBuilds = 0;
+            mDurationTotal = 0;
+            mDurationLongest = 0;
+
             File dir = new File(mTextFieldDirPath.getText());
 
             for (File file : getFilesFromDirectory(dir.getPath())) {
@@ -124,7 +129,7 @@ public class Main extends Application {
 
     private void processFile(File file) {
         String content = getContent(file);
-        if (content == null) return;
+        if (content == null || content.isEmpty()) return;
         String[] lines = content.split("\n");
         for (String line : lines) {
             try {

@@ -16,11 +16,11 @@
         <option name="nativeBundle" value="all" />
         <option name="title" value="GradleTimingInspector" />
         <option name="vendor" value="celox" />
-        <option name="version" value="0.0.1" />
+        <option name="version" value="" />
       </options>
     </properties>
     <root id="root">
-      <element id="archive" name="JavaFXApp.jar">
+      <element id="archive" name="GradleTimingInspector.jar">
         <element id="module-output" name="GradleTimingInspector" />
       </element>
     </root>
